@@ -1,8 +1,8 @@
 #!/bin/sh
 
-xrandr -s 1920x1200 &
-xset r rate 300 57 &
+#xrandr -s 1920x1200 &
+#nitrogen --restore &
+xset r rate 300 59 &
 #$HOME/.local/bin/wallpaper &
-nitrogen --restore &
 picom &
 #/home/kbc/.config/polybar/launch.sh &
