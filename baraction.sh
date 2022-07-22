@@ -35,6 +35,7 @@ while :; do
 		WEATHER=$(curl -s 'wttr.in/Gainesville?format=1&u' | sed 's/ //g' | sed 's/+//g')
 		WTEXT=$(grep -o "[0-9].*" <<< "$WEATHER")
 		WICON=${WEATHER:0:1}
+		#notify-send "Updating Stuff"
 	fi
 	echo -e "+@fg=6;+@fn=1;$WICON+@fn=0; $WTEXT +@fg=0;| +@fg=1;+@fn=1;🔁+@fn=0; Updates: +@fg=4;$PACUPDATE+@fg=1; [$(kern)] +@fg=0;| +@fg=2;+@fn=1;💾+@fn=0; $(mem) +@fg=0;|+@fg=4; +@fn=1;🔊+@fn=0; $(vol) +@fg=0;| +@fg=5;+@fn=1;🗓+@fn=0; $(dte)"
 	I=$(( ( ${I} + 1 ) % 500 ))
